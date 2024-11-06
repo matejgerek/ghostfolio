@@ -73,7 +73,6 @@ export class AuthService {
         id: user.id
       });
     } catch (error) {
-      console.log(error);
       throw new InternalServerErrorException(
         'validateInternetIdentityLogin',
         error.message
