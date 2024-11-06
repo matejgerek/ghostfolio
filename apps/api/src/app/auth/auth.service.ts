@@ -56,7 +56,7 @@ export class AuthService {
         const isUserSignupEnabled =
           await this.propertyService.isUserSignupEnabled();
 
-        if (!isUserSignupEnabled || true) {
+        if (!isUserSignupEnabled) {
           throw new Error('Sign up forbidden');
         }
 
@@ -73,6 +73,7 @@ export class AuthService {
         id: user.id
       });
     } catch (error) {
+      console.log(error);
       throw new InternalServerErrorException(
         'validateInternetIdentityLogin',
         error.message
