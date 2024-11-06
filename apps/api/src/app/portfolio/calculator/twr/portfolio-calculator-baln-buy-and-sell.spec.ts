@@ -19,7 +19,7 @@ import { PortfolioSnapshotServiceMock } from '@ghostfolio/api/services/queues/po
 import { parseDate } from '@ghostfolio/common/helper';
 
 import { Big } from 'big.js';
-import { last } from 'lodash';
+import { last } from 'lodash/fp';
 
 jest.mock('@ghostfolio/api/app/portfolio/current-rate.service', () => {
   return {
