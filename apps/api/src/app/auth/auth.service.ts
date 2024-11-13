@@ -56,7 +56,7 @@ export class AuthService {
         const isUserSignupEnabled =
           await this.propertyService.isUserSignupEnabled();
 
-        if (!isUserSignupEnabled || true) {
+        if (!isUserSignupEnabled) {
           throw new Error('Sign up forbidden');
         }
 
